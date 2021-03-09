@@ -20,5 +20,12 @@ window.exercise09 = function () {
     { id: 3, first_name: "Matheus", last_name: "Garcia", age: 28 }
   ];
 
-  console.log("resultado ex9: ");
+  users.sort((a, b) => {
+    if (a.age === b.age) return b.id - a.id;
+
+    return b.age - a.age;
+  });
+
+  console.log(`resultado ex8: `);
+  users.map((user) => console.log(user));
 };
