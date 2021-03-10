@@ -57,7 +57,7 @@ module.exports = {
         .where({ id: naver_id }).first()
       
       const projects = await knex('projects')
-        .where('navers', '@>', [naver_id])
+        .where('navers', '<>', [naver_id])
         .select('projects.id', 'projects.name');
 
 
