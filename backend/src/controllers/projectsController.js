@@ -35,4 +35,22 @@ module.exports = {
   
   },
 
+  async store(req, res, next) {
+    try {
+      const { name, navers } = req.body;
+      
+      await knex('projects').insert({
+        name,
+        navers,
+      });
+
+      return res.status(201).json({
+        name,
+        navers,
+      })
+    } catch (error) {
+      next(error);
+    }
+
+  }
 }
