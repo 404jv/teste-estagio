@@ -10,5 +10,6 @@ routes.post('/navers', NaverController.store);
 
 routes.get('/projects', ProjectsController.index);
 routes.get('/projects/show', ProjectsController.show);
+routes.post('/projects', ProjectsController.store);
 
 module.exports = routes;
