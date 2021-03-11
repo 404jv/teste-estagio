@@ -37,7 +37,7 @@ module.exports = {
           .where('id', naverProjects[i].id);
       }
 
-      return res.json({
+      return res.status(201).json({
         name, 
         birthdate, 
         admission_date, 
