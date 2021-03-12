@@ -1,31 +1,75 @@
-/* E9
-**Para o seguinte exercício** considere o array de objetos:
-[
-    {id: 1, first_name: ‘Juca’, last_name: ‘Da Silva’, age: 42},
-    {id: 2, first_name: ‘Daniel’, last_name: ‘Gonçalves’,  age: 21},
-    {id: 3, first_name: ‘Matheus’, last_name: ‘Garcia’, age: 28},
-    {id: 4, first_name: ‘Gabriel’, last_name: ‘Dorneles’,  age: 21}
+/* E10
+Para o seguinte exercício, considere os array de objetos.
+
+const movies = [
+	{ id: 1, name: 'Joker' },
+	{ id: 2, name: 'Parasite' },
+	{ id: 3, name: 'Avengers' },
+	{ id: 4, name: 'Her' }
+]
+const actors = [
+	{ id: 1, name: 'Cho Yeo-jeong', movie_ids: [2] },
+	{ id: 2, name: 'Robert Downey Jr.', movie_ids: [3] },
+	{ id: 3, name: 'Joaquin Phoenix', movie_ids: [1, 4] },
+	{ id: 4, name: 'Scarlett Johansson', movie_ids: [3] }
 ]
 
-Ordene o array de forma decrescente por idade,
-em caso de empate o desempate é pelo id(em ordem crescente)
+Faça uma função que receba 2 parâmetros: um array de movies e um array de actors.
+ A função deve retornar um array de movies, onde cada movie possui a propriedade actors, que sera um array com os nomes dos atores. Por ex:
 
-*/
+[
+	{
+		id: 99,
+		name: 'Lorem Ipsum',
+		actors: ['John Doe', 'Jane Doe']
+	}
+]
 
-window.exercise09 = function () {
-  const users = [
-    { id: 1, first_name: "Juca", last_name: "Da Silva", age: 42 },
-    { id: 2, first_name: "Daniel", last_name: "Gonçalves", age: 21 },
-    { id: 4, first_name: "Gabriel", last_name: "Dorneles", age: 21 },
-    { id: 3, first_name: "Matheus", last_name: "Garcia", age: 28 }
+ */
+
+window.exercise10 = function () {
+  const movies = [
+    { id: 1, name: "Joker" },
+    { id: 2, name: "Parasite" },
+    { id: 3, name: "Avengers" },
+    { id: 4, name: "Her" }
+  ];
+  const actors = [
+    { id: 1, name: "Cho Yeo-jeong", movie_ids: [2] },
+    { id: 2, name: "Robert Downey Jr.", movie_ids: [3] },
+    { id: 3, name: "Joaquin Phoenix", movie_ids: [1, 4] },
+    { id: 4, name: "Scarlett Johansson", movie_ids: [3] }
   ];
 
-  users.sort((a, b) => {
-    if (a.age === b.age) return b.id - a.id;
+  const array = movies_and_actors(movies, actors);
 
-    return b.age - a.age;
+  console.log("resultado ex10: ");
+  array.map((user) => console.log(user));
+};
+
+function movies_and_actors(movies, actors) {
+  let movies_and_actors = movies.map((movie) => {
+    return {
+      id: movie.id,
+      name: movie.name,
+      actors: []
+    };
   });
 
-  console.log(`resultado ex8: `);
-  users.map((user) => console.log(user));
-};
+  for (let i in movies_and_actors) {
+    const movie_actor = movies_and_actors[i];
+
+    for (let j in actors) {
+      const actor = actors[j];
+
+      for (let x in actor.movie_ids) {
+        const movieId = actor.movie_ids[x];
+
+        if (movieId === movie_actor.id)
+          movies_and_actors[i].actors.push(actor.name);
+      }
+    }
+  }
+
+  return movies_and_actors;
+}
