@@ -1,11 +1,10 @@
-# teste-estagio
-Created with CodeSandbox
+# 🧾 Teste de estágio
+Repositório para o teste de estágio da @Nave.
 
 ## ♻ Instruções para os desafios
 Para executar os desafios apenas clique no botão "Executar exercício"
 
 Link do Sandbox: https://v5ysr.csb.app/
-
 
 ## 🔙 Instruções para a API
 
