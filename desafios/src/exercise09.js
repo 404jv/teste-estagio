@@ -26,6 +26,6 @@ window.exercise09 = function () {
     return b.age - a.age;
   });
 
-  console.log(`resultado ex8: `);
+  console.log(`resultado ex9: `);
   users.map((user) => console.log(user));
 };
