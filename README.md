@@ -33,7 +33,7 @@ $ npx knex seed:run
 Para rodar todas as requests no insomnia só clicar no botão e importar.
 
 <p align="center">
-<a href="https://insomnia.rest/run/?label=&uri=" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+<a href="https://insomnia.rest/run/?label=API&uri=https%3A%2F%2Fraw.githubusercontent.com%2F404jv%2Fteste-estagio%2Fmain%2Fbackend%2FInsomnia-All_2021-03-12.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 </p>
 
 ## 🔴 Dificuldades
