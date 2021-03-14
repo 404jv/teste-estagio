@@ -7,7 +7,7 @@ Para executar os desafios apenas clique no botão "Executar exercício"
 Link do Sandbox: https://v5ysr.csb.app/
 
 ## 🐥 Instruções para o Frontend
-Por mais que eu não estaja participando da vaga frontend resolvi fazer o desafio mesmo assim, usando o [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) e desenvolvendo [esse layout](https://www.figma.com/file/2qJLqFk0DNCR89vZ1P3wMu/Teste-Fornt-End---Estagio?node-id=0%3A1) do figma. 
+Por mais que eu não esteja participando da vaga frontend resolvi fazer o desafio mesmo assim, usando o [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) e desenvolvendo [esse layout](https://www.figma.com/file/2qJLqFk0DNCR89vZ1P3wMu/Teste-Fornt-End---Estagio?node-id=0%3A1) do figma. 
 
 
 ## 🔙 Instruções para a API
@@ -101,3 +101,6 @@ const project = await knex('projects')
 const navers = await knex('navers')
   .whereIn('id', project.navers);
 ```
+---
+
+<p align="center">Done with 🖤 by João Victor Ramalho Alves</p>
