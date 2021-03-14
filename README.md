@@ -69,7 +69,7 @@ async store(req, res, next) {
 
     const naverProjects = await knex('projects').whereIn('id', projects);
 
-    for (i in naverProjects) {
+    for (let i in naverProjects) {
       naverProjects[i].navers.push(naverId.id);
 
       await knex('projects')
