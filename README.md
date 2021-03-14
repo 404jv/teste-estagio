@@ -1,31 +1,35 @@
 # 🧾 Teste de estágio
-Repositório para o teste de estágio da @Nave.
+Repositório para o [teste](https://github.com/naveteam/teste-estagio-2020) de estágio da [@Nave](https://nave.rs/).
 
 ## ♻ Instruções para os desafios
 Para executar os desafios apenas clique no botão "Executar exercício"
 
 Link do Sandbox: https://v5ysr.csb.app/
 
+## 🐥 Instruções para o Frontend
+Por mais que eu não estaja participando da vaga frontend resolvi fazer o desafio mesmo assim, usando o [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) e desenvolvendo [esse layout](https://www.figma.com/file/2qJLqFk0DNCR89vZ1P3wMu/Teste-Fornt-End---Estagio?node-id=0%3A1) do figma. 
+
+
 ## 🔙 Instruções para a API
 
-### 🔧 Tools
+### 🔧 Ferramentas
 - [Node](https://nodejs.org/en/)
 - [Knex](http://knexjs.org/)
 - [PostgreSQL](https://www.postgresql.org)
 
 ### 👩‍💻 How to Setup
 ```
-# Install dependencies
+# Instalar dependências
 $ npm install
 ```
 
 ```
-# Run migrations
+# Rodar as migrations
 $ npx knex migration:latest
 ```
 
 ```
-# Run seeds
+# Rodar os seeds
 $ npx knex seed:run
 ```
 
